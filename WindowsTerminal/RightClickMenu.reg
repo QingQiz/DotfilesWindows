@@ -1,0 +1,18 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\wt]
+@="Windows Terminal here"
+"Icon"="C:\\Users\\angel\\Documents\\windows-terminal\\terminal.ico"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\wt\command]
+@="C:\\Users\\Angel\\AppData\\Local\\Microsoft\\WindowsApps\\wt.exe"
+
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\wtAdmin]
+@="Windows Terminal here (Admin)"
+"HasLUAShield"=""
+"Icon"="C:\\Users\\angel\\Documents\\windows-terminal\\terminal.ico"
+
+;Admin action command
+[HKEY_CLASSES_ROOT\Directory\Background\shell\wtAdmin\command]
+@="PowerShell -WindowStyle Hidden -Command \"Start-Process wt -ArgumentList '-d','.' -Verb runAs\""
