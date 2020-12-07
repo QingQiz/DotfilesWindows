@@ -3,5 +3,11 @@ if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]:
     exit;
 }
 
-# Get-DnsClientServerAddress | Where-Object InterfaceAlias -eq "Sl" | Select-Object -Property InterfaceIndex -Last 1
-Set-DnsClientServerAddress -InterfaceAlias "SL" -ServerAddresses {1.1.1.1, 8.8.8.8}
+$DNSAddresses = @(
+  ([IPAddress]'1.1.1.1').IPAddressToString
+  ([IPAddress]'8.8.8.8').IPAddressToString
+  ([IPAddress]'2606:4700:4700::1111').IPAddressToString
+  ([IPAddress]'2001:4860:4860::8888').IPAddressToString
+)
+
+Set-DnsClientServerAddress -InterfaceAlias "SL" -ServerAddresses $DNSAddresses
