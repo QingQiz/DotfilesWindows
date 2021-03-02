@@ -5,7 +5,7 @@ Windows Registry Editor Version 5.00
 "Icon"="C:\\Users\\angel\\Documents\\windows-terminal\\terminal.ico"
 
 [HKEY_CLASSES_ROOT\Directory\Background\shell\wt\command]
-@="C:\\Users\\Angel\\AppData\\Local\\Microsoft\\WindowsApps\\wt.exe"
+@="C:\\Users\\Angel\\AppData\\Local\\Microsoft\\WindowsApps\\wt.exe -d \"%V\""
 
 
 [HKEY_CLASSES_ROOT\Directory\Background\shell\wtAdmin]
@@ -15,4 +15,4 @@ Windows Registry Editor Version 5.00
 
 ;Admin action command
 [HKEY_CLASSES_ROOT\Directory\Background\shell\wtAdmin\command]
-@="PowerShell -WindowStyle Hidden -Command \"Start-Process wt -ArgumentList '-d','.' -Verb runAs\""
+@="PowerShell -WindowStyle Hidden -Command \"Start-Process wt -ArgumentList '-d','%V' -Verb runAs\""
