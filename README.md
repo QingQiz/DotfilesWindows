@@ -1,1 +1,5 @@
-there are some of my dotfiles
+## Dotfiles
+
+### Useful command
+ 
+- [Invoke-AsAdministrator](https://github.com/jfhbrook/PSeudo)
